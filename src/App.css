@@ -1,0 +1,132 @@
+.chart-page {
+  --chart-left: calc(136 / 720 * 100%);
+
+  width: min(920px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 56px 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.chart-header {
+  position: relative;
+  margin-bottom: 18px;
+  margin-left: var(--chart-left);
+  padding-top: 1px;
+}
+
+.chart-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 91.53%;
+  height: 1px;
+  background: #e3120b;
+}
+
+.economist-rule {
+  width: 34px;
+  height: 8px;
+  margin-bottom: 8px;
+  background: #e3120b;
+}
+
+.chart-header h1 {
+  margin: 0 0 6px;
+  color: #222;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.chart-header p {
+  margin: 0;
+  color: #333;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.bar-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.chart-source {
+  margin-top: 4px;
+  margin-left: var(--chart-left);
+  color: #7f7f7f;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.chart-source p {
+  margin: 0;
+}
+
+.grid-lines line {
+  stroke: #d8d8d8;
+  stroke-width: 1;
+}
+
+.grid-lines .zero-grid-line line {
+  stroke: #777;
+}
+
+.grid-lines text {
+  fill: #9a9a9a;
+  font-size: 11px;
+  text-anchor: middle;
+}
+
+.bar {
+  fill: #0a6ea2;
+}
+
+.bar-label {
+  fill: #fff;
+  font-size: 13px;
+  text-anchor: start;
+}
+
+.bar-label-outside {
+  fill: #075f8d;
+}
+
+.code-notes {
+  margin-top: 48px;
+  margin-left: var(--chart-left);
+  color: #222;
+}
+
+.code-notes h2 {
+  margin: 0 0 20px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.code-notes article {
+  margin-bottom: 24px;
+}
+
+.code-notes h3 {
+  margin: 0 0 8px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.code-notes pre {
+  overflow-x: auto;
+  margin: 0;
+  padding: 16px;
+  background: #f4f4f4;
+  border-left: 3px solid #e3120b;
+}
+
+.code-notes code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.45;
+}
