@@ -26,7 +26,7 @@ const margin = {
 const xTicks = range(0, 56, 5)
 
 // Put the largest value at the top.
-const sortedData = sort(data, (d) => d.count, descending)`,
+const sortedData = sort(data, (a, b) => descending(a.count, b.count))`,
   },
   {
     title: '2. D3 scales',
@@ -46,7 +46,20 @@ const yScale = scaleBand()
   .paddingInner(0.4)`,
   },
   {
-    title: '3. React renders the SVG',
+    title: '3. React renders the title and source',
+    code: `<header className="chart-header">
+  <div className="economist-rule" />
+  <h1>Escape artists</h1>
+  <p>Number of laboratory-acquired infections, 1970-2021</p>
+</header>
+
+<footer className="chart-source">
+  <p>Sources: Laboratory-Acquired Infection Database; American Biological Safety Association</p>
+  <p>The Economist</p>
+</footer>`,
+  },
+  {
+    title: '4. React renders the SVG',
     code: `<svg className="bar-chart" viewBox={\`0 0 \${width} \${height}\`}>
   <g transform={\`translate(\${margin.left}, \${margin.top})\`}>
     <g className="grid-lines">
@@ -91,7 +104,7 @@ const yScale = scaleBand()
 </svg>`,
   },
   {
-    title: '4. Chart styling',
+    title: '5. Chart styling',
     code: `.chart-page {
   --chart-left: calc(136 / 720 * 100%);
   width: min(920px, calc(100vw - 32px));
