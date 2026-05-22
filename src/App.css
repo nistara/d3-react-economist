@@ -38,7 +38,7 @@
 }
 
 .chart-header::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -118,8 +118,8 @@
 }
 
 .code-notes {
-  margin-top: 48px;
-  margin-left: var(--chart-left);
+  margin-top: 0;
+  padding-bottom: 56px;
   color: #222;
 }
 
@@ -358,4 +358,18 @@
   .studio-preview {
     border-left: 0;
   }
+}
+
+.demo-page {
+  width: min(920px, calc(100vw - 32px));
+  margin: 0 auto;
+}
+
+.demo-page .chart-page {
+  width: 100%;
+}
+
+.code-notes pre {
+  max-height: 520px;
+  border-radius: 8px;
 }

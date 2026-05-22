@@ -1,23 +1,23 @@
-import { useState } from 'react'
-import { ChartStudio } from './ChartStudio'
-import { EconomistChart } from './EconomistChart'
-import './App.css'
+import { useState } from "react";
+import { ChartStudio } from "./ChartStudio";
+import { EconomistChartDemo } from "./EconomistChartDemo";
+import "./App.css";
 
 const tabs = [
-  { id: 'walkthrough', label: 'Chart walkthrough' },
-  { id: 'studio', label: 'Chart studio' },
-]
+  { id: "walkthrough", label: "Chart walkthrough" },
+  { id: "studio", label: "Chart studio" },
+];
 
 function App() {
-  const [activeTab, setActiveTab] = useState('walkthrough')
+  const [activeTab, setActiveTab] = useState("walkthrough");
 
   return (
     <main>
       <nav className="tabs" aria-label="Chart app views">
         {tabs.map((tab) => (
           <button
-            aria-current={activeTab === tab.id ? 'page' : undefined}
-            className={activeTab === tab.id ? 'active-tab' : ''}
+            aria-current={activeTab === tab.id ? "page" : undefined}
+            className={activeTab === tab.id ? "active-tab" : ""}
             key={tab.id}
             type="button"
             onClick={() => setActiveTab(tab.id)}
@@ -27,9 +27,9 @@ function App() {
         ))}
       </nav>
 
-      {activeTab === 'walkthrough' ? <EconomistChart /> : <ChartStudio />}
+      {activeTab === "walkthrough" ? <EconomistChartDemo /> : <ChartStudio />}
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
